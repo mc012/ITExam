@@ -1,0 +1,421 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif; /* Modern, sleek font */
+  line-height: 1.8; /* Improved readability */
+  color: #1a1a1a; /* Darker, softer gray */
+  background: linear-gradient(
+    135deg,
+    #e0eafc 0%,
+    #cfdef3 100%
+  ); /* Subtle gradient background */
+  scroll-behavior: smooth; /* Smooth scrolling */
+}
+
+/* Navigation Bar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(
+    to right,
+    #2c3e50,
+    #4b79a1
+  ); /* Gradient for depth */
+  padding: 1.5rem 3rem; /* More spacious padding */
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); /* Enhanced shadow */
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px); /* Frosted glass effect */
+}
+
+.logo {
+  font-size: 2rem;
+  font-weight: 800;
+  background: linear-gradient(
+    to right,
+    #6b7280,
+    #60a5fa
+  ); /* Changed to blue-gray gradient */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05); /* Subtle zoom on hover */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 2rem; /* Wider spacing */
+}
+
+.nav-links a {
+  color: #f0f0f0; /* Lighter for contrast */
+  text-decoration: none;
+  font-size: 1.1rem;
+  position: relative; /* For underline animation */
+  transition: color 0.3s ease;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #ff7e5f; /* Vibrant accent */
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #ff7e5f;
+}
+
+.nav-links a:hover::after {
+  width: 100%; /* Animated underline */
+}
+
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ff7e5f; /* Match accent color */
+  transition: transform 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: rotate(90deg); /* Fun rotation effect */
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(120deg, #6b7280, #4c68d7); /* Dynamic gradient */
+  color: white;
+  text-align: left;
+  padding: 6rem 3rem;
+  position: relative;
+  overflow: hidden; /* For image positioning */
+  -webkit-animation: fadeIn 1s ease-in;
+          animation: fadeIn 1s ease-in; /* Fade-in animation */
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.hero img {
+  height: 300px; /* Slightly larger */
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%); /* Centered vertically */
+  opacity: 0.9;
+  transition: transform 0.5s ease;
+}
+
+.hero img:hover {
+  transform: translateY(-50%) scale(1.05); /* Subtle zoom */
+}
+
+.hero h1 {
+  font-size: 3rem; /* Larger for impact */
+  margin-bottom: 1.5rem;
+  color: #fff; /* White for contrast */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+}
+
+.hero ul {
+  font-size: 1.3rem; /* Larger for readability */
+  margin-bottom: 2rem;
+  list-style: none; /* Remove bullets */
+}
+
+.hero ul li::before {
+  content: "→"; /* Custom arrow bullet */
+  color: #ff7e5f;
+  margin-right: 10px;
+}
+
+.cta-button {
+  background: linear-gradient(to right, #ff7e5f, #feb47b); /* Gradient button */
+  color: white;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  border-radius: 50px; /* Rounded for modern look */
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(
+    to right,
+    #feb47b,
+    #ff7e5f
+  ); /* Reverse gradient */
+}
+
+/* Section Styles */
+.section {
+  padding: 5rem 3rem;
+  text-align: center;
+  background: rgba(255, 255, 255, 0.9); /* Semi-transparent for layering */
+  border-radius: 15px; /* Rounded corners */
+  margin: 2rem;
+}
+
+.section h2 {
+  font-size: 2.5rem;
+  margin-bottom: 2.5rem;
+  color: #2c3e50; /* Darker for contrast */
+  position: relative;
+}
+
+.section h2::after {
+  content: "";
+  width: 50px;
+  height: 4px;
+  background: #ff7e5f;
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* Skills Section */
+.skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.skills p {
+  background: linear-gradient(
+    to right,
+    #e0eafc,
+    #cfdef3
+  ); /* Gradient background */
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.skills p:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* About Section */
+.about-content {
+  text-align: left;
+  font-size: 1.5rem;
+  display: flex;
+  gap: 2.5rem;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 2rem;
+  border-radius: 15px;
+}
+
+/* Portfolio Section */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2.5rem;
+  padding: 1.5rem;
+}
+
+.portfolio-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.portfolio-item img {
+  width: 100%;
+  height: 180px; /* Taller images */
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-item img:hover {
+  transform: scale(1.03); /* Subtle zoom */
+}
+
+.portfolio-item a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: #2c3e50;
+  font-weight: 600;
+}
+
+.portfolio-item a:hover {
+  color: #ff7e5f;
+  text-decoration: underline;
+}
+
+/* Awards Section */
+.awards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  padding: 1.5rem;
+}
+
+.award-item {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.award-item:hover {
+  transform: translateY(-5px);
+}
+
+.award-img {
+  width: 100%;
+  height: 140px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+}
+
+.award-item h3 {
+  font-size: 1.2rem;
+  color: #2c3e50;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 80px;
+    left: 0;
+    background: linear-gradient(to bottom, #2c3e50, #4b79a1);
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 0 0 10px 10px;
+  }
+
+  .nav-links.active {
+    display: flex;
+    -webkit-animation: slideDown 0.3s ease;
+            animation: slideDown 0.3s ease;
+  }
+
+  @-webkit-keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slideDown {
+    from {
+      transform: translateY(-10px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .hero {
+    padding: 4rem 1.5rem;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero ul {
+    font-size: 1.1rem;
+  }
+
+  .hero img {
+    position: static;
+    transform: none;
+    width: 60%;
+    margin: 1.5rem auto;
+    display: block;
+  }
+
+  .about-content {
+    flex-direction: column;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 2.5rem 1rem;
+  }
+
+  .section {
+    padding: 2.5rem 1rem;
+    margin: 1rem;
+  }
+
+  .portfolio-item img {
+    height: 140px;
+  }
+
+  .navbar {
+    padding: 1rem 1.5rem;
+  }
+}
