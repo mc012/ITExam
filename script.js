@@ -17,7 +17,7 @@ if (hamburger && navLinks) {
       document.body.style.position = "";
       document.body.style.top = "";
       document.body.style.width = "";
-      window.scrollTo(0, scrollPosition);
+      window.scrollTo({ top: scrollPosition, behavior: "instant" });
     }
     navLinks.classList.toggle("active");
     hamburger.setAttribute(
@@ -38,11 +38,8 @@ document
       if (target) {
         const navbar = document.querySelector(".navbar");
         const navbarHeight = navbar ? navbar.offsetHeight : 0;
-        const extraPadding = 10; // Additional padding for visual spacing
-        const targetPosition =
-          target.getBoundingClientRect().top +
-          window.scrollY -
-          (navbarHeight + extraPadding);
+        const extraPadding = 10; // Consistent padding below navbar
+        const targetPosition = target.offsetTop - (navbarHeight + extraPadding);
 
         // Close mobile menu before scrolling
         if (navLinks && hamburger && navLinks.classList.contains("active")) {
@@ -53,11 +50,11 @@ document
             document.body.style.position = "";
             document.body.style.top = "";
             document.body.style.width = "";
-            window.scrollTo(0, scrollPosition);
+            window.scrollTo({ top: scrollPosition, behavior: "instant" });
           }
         }
 
-        // Smooth scroll with offset
+        // Smooth scroll to consistent position
         window.scrollTo({
           top: targetPosition,
           behavior: "smooth"

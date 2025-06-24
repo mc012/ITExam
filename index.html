@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Personal website</title>
+  <title>Don&#39;t see my website again</title>
   <link rel="stylesheet" href="./style.css">
 
 </head>
@@ -25,10 +25,12 @@
     <div class="logo">LAU IAT HEI</div>
     <ul class="nav-links">
       <li><a href="#home">Home</a></li>
-      <li><a href="#skills">Skills</a></li>
+      <li><a href="#jobs">Jobs</a></li>
       <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#awards">Awards</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
     <div class="hamburger">☰</div>
   </nav>
@@ -36,24 +38,27 @@
   <!-- Hero Section -->
   <section id="home" class="hero">
     <h1>Personal Information</h1>
-    <img src="https://imgur.com/KYYXHQ3.jpg" alt="My photo" class="My photo">
+    <a href="#" class="enlarge-link" data-src="https://imgur.com/KYYXHQ3.jpg">
+      <img src="https://imgur.com/KYYXHQ3.jpg" alt="My photo" class="hero-img">
+    </a>
     <ul>Name: LAU IAT HEI</ul>
     <ul>Educational background: Senior</ul>
-    <ul>Email: iatheilau@gmail.com</ul>
-    <ul>Tel: +853 66646688</ul>
+    <ul>City: Macau</ul>
+    <ul>School: St. Joseph Diocesan College (The Fifth School)</ul>
     <a href="#awards" class="cta-button">My Awards</a>
   </section>
 
-  <!-- Skills Section -->
-  <section id="skills" class="section">
+  <!-- Jobs Section -->
+  <section id="jobs" class="section">
     <div class="container">
-      <h2>My Skills</h2>
-      <div class="skills">
-        <p>Expert in video editing, crafting engaging, professional content.</p>
-        <p>Strong presentation skills for confident, compelling delivery.</p>
-        <p>Solid mathematics foundation for precise problem-solving.</p>
-        <p>Working knowledge of programming for creative, technical solutions.</p>
-        <p>Proficient in Microsoft Office, managing data and streamlining workflows.</p>
+      <h2>Association in School</h2>
+      <div class="jobs">
+        <div class="job-item">
+          <h3>Student Union Member</h3>
+          <p><strong>Finance Department</strong></p>
+          <li>Participated Caritas Macau Charity Bazaar</li>
+          <li>Hold the Christmas Party at school, ensuring the completion of it</li>
+        </div>
       </div>
     </div>
   </section>
@@ -95,21 +100,62 @@
     </div>
   </section>
 
+  <!-- Skills Section -->
+  <section id="skills" class="section">
+    <div class="container">
+      <h2>My Skills</h2>
+      <div class="skills">
+        <div class="skill-item">
+          <a href="#" class="enlarge-link" data-src="https://via.placeholder.com/100">
+            <img src="https://imgur.com/ScxGUDg.jpg" alt="Video editing skill" class="skill-img">
+          </a>
+          <p>I excel in creating engaging content through my video editing expertise, crafting polished, professional videos that captivate audiences.</p>
+        </div>
+        <div class="skill-item">
+          <a href="#" class="enlarge-link" data-src="https://via.placeholder.com/100">
+            <img src="https://imgur.com/S1PUitu.jpg" alt="Presentation skill" class="skill-img">
+          </a>
+          <p>My strong presentation skills ensure confident and compelling delivery.</p>
+        </div>
+        <div class="skill-item">
+          <a href="#" class="enlarge-link" data-src="https://via.placeholder.com/100">
+            <img src="https://imgur.com/09EoWe7.jpg" alt="Mathematics skill" class="skill-img">
+          </a>
+          <p>I possess a solid foundation in mathematics, enabling me to tackle complex problems with precision and analytical thinking.</p>
+        </div>
+        <div class="skill-item">
+          <a href="#" class="enlarge-link" data-src="https://via.placeholder.com/100">
+            <img src="https://imgur.com/qDZ4zVS.jpg" alt="Programming skill" class="skill-img">
+          </a>
+          <p>I have a working knowledge of programming, which enhances my ability to develop creative solutions and adapt to technical challenges.</p>
+        </div>
+        <div class="skill-item">
+          <a href="#" class="enlarge-link" data-src="https://via.placeholder.com/100">
+            <img src="https://imgur.com/VSy5oKU.jpg" alt="Microsoft Office skill" class="skill-img">
+          </a>
+          <p>Proficient in Microsoft Office tools, I efficiently manage data, create dynamic reports, and streamline workflows, making me a versatile asset in both creative and analytical environments.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- Projects Section -->
   <section id="projects" class="section">
     <h2>My Project</h2>
     <div class="portfolio-grid">
       <div class="portfolio-item">
-        <img src="https://imgur.com/p18Y3IH.png" alt="useless fan">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/Aqufz49cc6I" title="Project One Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h3>Project One</h3>
         <p>A powerful fan which can feel rebirth in summer.</p>
       </div>
       <div class="portfolio-item">
-        <img src="https://imgur.com/qxvGgqR.jpg" alt="Project 2">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/SB-GgZ1zV4U" title="Project Two Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
         <h3>Project Two</h3>
-        <p>A video that introduce main industries in Macau.
-          <a href="https://youtu.be/SB-GgZ1zV4U?si=ORfRvqOSwzCJ-McA">Video</a>
-        </p>
+        <p>A video that introduces main industries in Macau.</p>
       </div>
     </div>
   </section>
@@ -119,36 +165,65 @@
     <h2>My Awards</h2>
     <div class="awards-grid">
       <div class="award-item">
-        <img src="https://imgur.com/QG7rVNW.jpg" alt="Award 1" class="award-img">
-        <h3>Sinapore Math Challenge Competition</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/QG7rVNW.jpg">
+          <img src="https://imgur.com/QG7rVNW.jpg" alt="Award 1" class="award-img">
+        </a>
+        <h3>Award 1</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/Y4gOsAx.jpg" alt="Award 2" class="award-img">
-        <h3>HuaXia Cup</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/Y4gOsAx.jpg">
+          <img src="https://imgur.com/Y4gOsAx.jpg" alt="Award 2" class="award-img">
+        </a>
+        <h3>Award 2</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/0kySzkj.jpg" alt="Award 3" class="award-img">
-        <h3>Macau Secondary School History Competition</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/0kySzkj.jpg">
+          <img src="https://imgur.com/0kySzkj.jpg" alt="Award 3" class="award-img">
+        </a>
+        <h3>Award 3</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/hmTfdTa.jpg" alt="Award 4" class="award-img">
-        <h3>GMEC</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/hmTfdTa.jpg">
+          <img src="https://imgur.com/hmTfdTa.jpg" alt="Award 4" class="award-img">
+        </a>
+        <h3>Award 4</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/IBt8uiE.jpg" alt="Award 5" class="award-img">
-        <h3>FISO Science Certificate </h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/IBt8uiE.jpg">
+          <img src="https://imgur.com/IBt8uiE.jpg" alt="Award 5" class="award-img">
+        </a>
+        <h3>Award 5</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/x9mOwGP.jpg" alt="Award 6" class="award-img">
-        <h3>Fiso Math Certificate</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/x9mOwGP.jpg">
+          <img src="https://imgur.com/x9mOwGP.jpg" alt="Award 6" class="award-img">
+        </a>
+        <h3>Award 6</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/dJxgDDf.jpg" alt="Award 7" class="award-img">
-        <h3>School Literature, History, and Geography Knowledge Competition</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/dJxgDDf.jpg">
+          <img src="https://imgur.com/dJxgDDf.jpg" alt="Award 7" class="award-img">
+        </a>
+        <h3>Award 7</h3>
       </div>
       <div class="award-item">
-        <img src="https://imgur.com/WCy7h4V.jpg" alt="Award 8" class="award-img">
-        <h3>MOS Certificate</h3>
+        <a href="#" class="enlarge-link" data-src="https://imgur.com/WCy7h4V.jpg">
+          <img src="https://imgur.com/WCy7h4V.jpg" alt="Award 8" class="award-img">
+        </a>
+        <h3>Award 8</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact Me</h2>
+      <div class="contact-info">
+        <p><strong>Email:</strong> <a href="mailto:iatheilau@gmail.com">iatheilau@gmail.com</a></p>
+        <p><strong>Phone:</strong><a href="tel: +85366646688">+853 66646688</a></p>
+        <p><strong>WeChat ID:</strong> AlexanderLau001</p>
+        <p><strong>IG:</strong> <a href="https://www.instagram.com/alexanderlau01?igsh=aTNkaHljZ3hhM3U2">@alexanderlau01</a></p>
       </div>
     </div>
   </section>
