@@ -50,7 +50,8 @@ body {
   top: 0;
   z-index: 1000;
   box-shadow: var(--shadow);
-  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+          backdrop-filter: blur(8px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 
@@ -134,7 +135,18 @@ body {
   padding: 5rem 2.5rem;
   position: relative;
   overflow: hidden;
-  animation: pulse 12s ease-in-out infinite;
+  -webkit-animation: pulse 12s ease-in-out infinite;
+          animation: pulse 12s ease-in-out infinite;
+}
+
+@-webkit-keyframes pulse {
+  0%,
+  100% {
+    background: linear-gradient(135deg, #7c3aed, #db2777);
+  }
+  50% {
+    background: linear-gradient(135deg, #db2777, #7c3aed);
+  }
 }
 
 @keyframes pulse {
@@ -151,7 +163,8 @@ body {
   width: 200px;
   height: 200px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin: 1rem auto;
   opacity: 0.9;
   filter: drop-shadow(var(--glow));
@@ -430,7 +443,8 @@ body {
   width: 80px;
   height: 80px;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   margin-bottom: 1rem;
   cursor: pointer;
   transition: var(--transition);
@@ -469,7 +483,8 @@ body {
 .portfolio-item img {
   width: 100%;
   max-height: 160px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
   transition: var(--transition);
   cursor: pointer;
@@ -552,7 +567,8 @@ body {
 .award-img {
   width: 100%;
   max-height: 240px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: 8px;
   margin-bottom: 0.8rem;
   filter: drop-shadow(var(--glow));
@@ -615,11 +631,21 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  animation: fadeIn 0.3s ease;
+  -webkit-animation: fadeIn 0.3s ease;
+          animation: fadeIn 0.3s ease;
 }
 
 .modal.show {
   display: flex;
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fadeIn {
@@ -634,10 +660,21 @@ body {
 .modal img {
   max-width: 90%;
   max-height: 90%;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   border-radius: var(--border-radius);
   box-shadow: var(--glow), 0 0 20px rgba(255, 107, 107, 0.3);
-  animation: scaleIn 0.3s ease;
+  -webkit-animation: scaleIn 0.3s ease;
+          animation: scaleIn 0.3s ease;
+}
+
+@-webkit-keyframes scaleIn {
+  from {
+    transform: scale(0.8);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 @keyframes scaleIn {
@@ -689,7 +726,19 @@ body {
 
   .nav-links.active {
     display: flex;
-    animation: slideDown 0.3s ease;
+    -webkit-animation: slideDown 0.3s ease;
+            animation: slideDown 0.3s ease;
+  }
+
+  @-webkit-keyframes slideDown {
+    from {
+      transform: translateY(-15px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
   }
 
   @keyframes slideDown {
@@ -816,7 +865,8 @@ body {
   .hamburger,
   .cta-button,
   .about-content li {
-    animation: none !important;
+    -webkit-animation: none !important;
+            animation: none !important;
     transition: none !important;
   }
 }
